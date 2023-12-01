@@ -1,9 +1,6 @@
 package cc.synpulse8.adapterservice.domain.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,8 +17,15 @@ import java.time.LocalDate;
 public class TransactionEntity implements Serializable {
 
     @Id
+    @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Column(name = "UNIQUE_IDENTIFIER", nullable = false)
     private String uniqueIdentifier;
+
+    @Column(name = "TRANSACTION_TYPE", nullable = false)
+    private String transactionType;
 
     @Column(name = "CURRENCY_CODE", nullable = false)
     private String currencyCode;
