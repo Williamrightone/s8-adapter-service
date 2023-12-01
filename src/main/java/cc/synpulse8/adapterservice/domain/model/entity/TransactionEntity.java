@@ -14,7 +14,7 @@ import java.time.LocalDate;
 
 @Data
 @Entity
-@Table(name = "TRANSACTION")
+@Table(name = "TRANSACTION_INFO")
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransactionEntity implements Serializable {
