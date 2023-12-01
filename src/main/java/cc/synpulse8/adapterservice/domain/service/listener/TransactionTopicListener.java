@@ -25,7 +25,6 @@ public class TransactionTopicListener {
         TransactionInfo transactionInfo = objectMapper.readValue(transactions, TransactionInfo.class);
 
         transactionService.receiveTransactionInfo(transactionInfo);
-
     }
 
 

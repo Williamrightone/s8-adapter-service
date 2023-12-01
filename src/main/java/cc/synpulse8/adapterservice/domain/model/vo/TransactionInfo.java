@@ -14,7 +14,7 @@ public class TransactionInfo {
     private String uniqueIdentifier;
     private String currencyAmount;
     private String accountIBAN;
-    private LocalDate valueDate;
+    private String valueDate;
     private String description;
 
 }
