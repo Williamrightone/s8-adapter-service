@@ -12,6 +12,7 @@ import java.time.LocalDate;
 public class TransactionInfo {
 
     private String uniqueIdentifier;
+    private String transactionType;
     private String currencyAmount;
     private String accountIBAN;
     private String valueDate;

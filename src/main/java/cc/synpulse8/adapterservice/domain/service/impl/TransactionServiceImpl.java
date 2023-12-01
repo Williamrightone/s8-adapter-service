@@ -28,6 +28,7 @@ public class TransactionServiceImpl implements TransactionService {
             throw new IllegalArgumentException("Invalid currency string: " + transactionInfo.getCurrencyAmount());
         }
 
+        transactionEntity.setTransactionType(transactionInfo.getTransactionType());
         transactionEntity.setUniqueIdentifier(transactionInfo.getUniqueIdentifier());
         transactionEntity.setCurrencyCode(currencyCodeParts[0]);
         transactionEntity.setAmount(new BigDecimal(currencyCodeParts[1]));
